@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+:root{
+    --color-principal: #b62138;
+    --color-50: #fef2f2;
+    --color-100: #fde6e6;
+    --color-200: #fad1d2;
+    --color-300: #f6abad;
+    --color-400: #f07c83;
+    --color-500: #e54e5a;
+    --color-600: #d12d42;
+    --color-700: #b62138;
+    --color-800: #941d33;
+    --color-900: #7f1c32;
+    --color-950: #460b17;
+    --color-blanco: #fff;
+    --color-negro: #000;
+    --color-negro2: #252525;
+}
+
+/*
+----------------------------------------------------------------
+                        INDEX.HTML
+----------------------------------------------------------------
+*/
+
+/* --------------- HEADER --------------- */
+
+/* --------------- NAVBAR 1 --------------- */
+
+.navbar {
+    width: 100%;
+    padding: 15px 0 15px 0;
+    display: flex;
+    justify-content:space-around;
+    background: var(--color-principal);
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-link a.active{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav-link a{
+    color: var(--color-blanco);
+}
+
+.nav-link, .drop-down li {
+    list-style: none;
+    height: 100%;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.nav-link, .drop-down li a {
+    text-decoration: none;
+    color: var(--color-blanco);
+}
+
+.drop-down {
+    position:absolute;
+    z-index: 1;
+    padding: 8px 0;
+    margin: 15px -20px;
+    background: var(--color-600);
+    border-radius: 8px;
+    font-size: 15px;
+    display: none;
+}
+
+.nav-link:hover {
+    background-color: var(--color-600);
+    color: #fff;
+    border-radius: 8px;
+}
+
+.nav-link span i{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.ayto:hover .drop-down {
+    display: block;
+}
+
+.ayto a {
+    display: flex;
+    align-items: center;
+}
+
+.admin:hover .drop-down {
+    display: block;
+}
+
+.admin a {
+    display: flex;
+    align-items: center;
+}
+
+.info:hover .drop-down {
+    display: block;
+}
+
+.info a {
+    display: flex;
+    align-items: center;
+}
+
+.drop-down li:hover {
+    background: var(--color-principal);
+    color: #fff;
+    border-radius: 8rem;
+}
+
+/* --------------- NAVBAR 2 --------------- */
+
+.navbar-barra2 .navbar-inicial{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width: 100%;
+    background: var(--color-blanco);
+    padding: 10px 30px 10px 30px;
+}
+
+.input-buscar input{
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid var(--color-500);
+    padding: 10px 10px;
+    font-size: 15px;
+    margin-right: 20px;
+}
+
+.input-buscar button{
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+.input-buscar button:hover{
+    background: var(--color-600);
+}
+
+.input-buscar i{
+    position: absolute;
+    color: var(--color-negro);
+    font-size: 15px;
+    top: 118px;
+    right: 152px;
+}
+
+/* --------------- INICIO --------------- */
+
+.inicio{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: #a5a5a593;
+}
+
+.container-carousel {
+    position: relative;
+    width: 35%;
+    margin-left: 3%;
+    margin-top: 5%;
+    margin-bottom: auto;
+    overflow: hidden;
+}
+
+.container-carousel1 {
+    width: 50%;
+    margin-left: 8%;
+    margin-top: 6%;
+    overflow: hidden;
+}
+
+.container-carousel1 table{
+    width: 110%;
+}
+
+.container-carousel1 table tr td h3{
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.container-carousel1 table tr td p{
+    font-size: 15   px;
+}
+
+.container-carousel1 table tr td{
+    padding: 15px;
+}
+
+.container-carousel1 table tr td i{
+    font-size: 40px;
+    background: var(--color-blanco);
+    padding: 20px;
+    border-radius: 50%;
+    color: var(--color-negro2);
+}
+
+.carruseles {
+    width: 1000%;
+    background: transparent;
+    display: flex;
+}
+
+.slider-section {
+    width: calc(100% / 10);
+    height: 100%;
+}
+
+.slider-section img {
+    width: 100%;
+    object-fit: cover;
+    border: 5px solid #808080c2;
+}
+
+.btn-left,
+.btn-right {
+    display: flex;
+    position: absolute;
+    top: 45%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ffffff81;
+    transform: translate(0,-50%);
+    transition: .5s ease;
+    user-select: none;
+}
+
+.btn-left:hover,
+.btn-right:hover {
+    background-color: #333333d4;
+    color: #fff;
+}
+
+.btn-left {
+    left: 10px;
+}
+
+.btn-right {
+    right: 10px;
+}
+
+/* --------------- NOTICIAS --------------- */
+
+.noticias h1{
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.noticias table{
+    width: 85%;
+    margin: auto;
+}
+
+.noticias table tr th img{
+    width: 100%;
+}
+
+.noticias table tr th{
+    padding: 20px;
+}
+
+.noticias .fecha{
+    font-weight: 200;
+    color: var(--color-principal);
+    text-align: left;
+    font-size: 13px;
+}
+
+.noticias .titulo{
+    font-size: 30px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.noticias .subtitulo{
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    text-align: justify;
+}
+
+.noticias div{
+    display: flex;
+    justify-content: center;
+}
+
+.noticias button{
+    padding: 10px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: var(--color-principal);
+    color: var(--color-blanco);
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.noticias button:hover{
+    background: var(--color-600);
+}
+
+/* --------------- AGENDA TABLÓN DE ANUNCIOS --------------- */
+
+.agan{
+    background: #a5a5a593;
+    height: 112vh;
+}
+
+.agan table{
+    width: 95%;
+    margin: auto;
+}
+
+.agan table tr th{
+    font-size: 40px;
+    font-weight: 400;
+    padding: 30px;
+}
+
+.agan table tr td{
+    padding: 20px;
+}
+
+.agan .fecha{
+    font-weight: 200;
+    color: var(--color-principal);
+    text-align: left;
+    font-size: 13px;
+}
+
+.agan .titulo{
+    font-size: 30px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.agan .subtitulo{
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    text-align: justify;
+}
+
+.agan .asoc1{
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+    color: var(--color-blanco);
+    background: #00cc33;
+}
+
+.agan .asoc2{
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+    color: var(--color-blanco);
+    background: #a128bc;
+}
+
+.agan .asoc3{
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+    color: var(--color-blanco);
+    background: #cc6666;
+}
+
+.agan .asoc4{
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+    color: var(--color-blanco);
+    background: #ffcc33;
+}
+
+.agan .titulo2{
+    font-size: 22px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.agan div{
+    display: flex;
+    justify-content: center;
+}
+
+.agan table tr .btn{
+    padding: 10px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: var(--color-principal);
+    color: var(--color-blanco);
+    margin-top: 50px;
+}
+
+.agan table tr .btn:hover{
+    background: var(--color-600);
+}
+
+.agan table tr .td-btn{
+    text-align: center;
+}
+
+.agan .esp{
+    border-bottom: 1px solid #000;
+}
+
+/* --------------- CORREO CIUDADNO --------------- */
+
+.correo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(../img/bg.jpg);
+    background-position: cover;
+    background-size: cover;
+}
+
+.form-container{
+    text-align: center;
+}
+
+.form-container h2{
+    font-size: 40px;
+    color: var(--color-blanco);
+    margin-bottom: 20px;
+    margin-top: 120px;
+}
+
+.correo form{
+    padding: 50px;
+    background: transparent;
+    border-radius: 15px;
+    width: 800px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 40px;
+    margin-bottom: 40px;
+}
+
+.form-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.correo form label{
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.correo form input, textarea{
+    padding: 20px 15px;
+    background: var(--color-blanco);
+    border: 0;
+    outline: none;
+    border-radius: 25px;
+    color: var(--color-negro);
+    font-size: 16px;
+}
+
+.correo form textarea{
+    margin-bottom: 40px;
+}
+
+.correo .btn{
+    padding: 17px 15px;
+    width: 180px;
+    align-self: center;
+    text-transform: capitalize;
+    color: var(--color-blanco);
+    font-size: 16px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    cursor: pointer;
+    background: var(--color-principal);
+}
+
+.correo .btn:hover{
+    background: var(--color-600);
+}
+
+/* --------------- FOOTER --------------- */
+
+.footer{
+    background: #a5a5a593;
+    padding:5px 0px;
+    text-align:center;
+}
+
+.footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color: var(--color-negro2);
+    font-size:0.8em;
+}
+
+.footer .row a{
+    text-decoration:none;
+    color:var(--color-negro2);
+    transition:0.5s;
+}
+
+.footer .row a:hover{
+    color: var(--color-negro);
+}
+
+.footer .row ul{
+    width:100%;
+}
+
+.footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+}
+
+.footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+}
